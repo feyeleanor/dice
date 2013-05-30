@@ -1,4 +1,3 @@
 dice
 ====
-
-A simple dice pool abstraction for pen-and-paper style games
+A simple package for generating random dice roll results, such as might be used in popular pen-and-paper games.
