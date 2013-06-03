@@ -42,15 +42,16 @@ func (d DicePool) Select(f Filter) (r int) {
 			r++
 		}
 	}
+	return
 }
 
 func (d *DicePool) Roll() {
 	if d.number > 0 {
 		if cap(d.values) == 0 {
-			d.values = make([]int, 0, number)
+			d.values = make([]int, 0, d.number)
 		}
-		for n := d.number; n > 0; n-- {
-			d.values[l] = d.rand()
+		for n := d.number - 1; n > -1; n-- {
+			d.values[n] = d.rand()
 		}
 	}
 }

@@ -2,7 +2,7 @@ package dice
 
 
 type Selectable interface {
-	Select(func(int) bool)
+	Select(func(int) bool) int
 }
 
 func AtLeast(s Selectable, target int) int {
